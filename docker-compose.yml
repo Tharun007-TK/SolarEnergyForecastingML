@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:///./solarsense.db
+      - DEMO_MODE=true
+      - SCHEDULER_INTERVAL_MINUTES=60
+      - LOG_LEVEL=INFO
+    volumes:
+      - backend-data:/app
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    depends_on:
+      - backend
+
+volumes:
+  backend-data:

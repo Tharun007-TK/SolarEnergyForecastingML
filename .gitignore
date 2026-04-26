@@ -1,0 +1,56 @@
+# ───── Python (backend) ─────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# ───── Node / Next.js (frontend) ─────
+node_modules/
+.next/
+out/
+build/
+dist/
+*.tsbuildinfo
+next-env.d.ts.bak
+
+# ───── Databases & local data ─────
+*.db
+*.sqlite
+*.sqlite3
+
+# ───── Environment & secrets ─────
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+
+# ───── Logs ─────
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ───── Editor / OS ─────
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ───── Claude Code harness ─────
+.claude/
+
+# ───── Coverage ─────
+coverage/
+.coverage
+htmlcov/
